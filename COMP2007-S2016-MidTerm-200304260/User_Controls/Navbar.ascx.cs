@@ -17,7 +17,27 @@ namespace COMP2007_S2016_MidTerm_200304260
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            SetActivePage();
+            if (!IsPostBack)
+            {
+                // check if a user is logged in
+                if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+
+                    // show the Contoso Content area
+                    TodoPlaceHolder.Visible = true;
+                    PublicPlaceHolder.Visible = false;
+
+                
+                }
+                else
+                {
+                    // only show login and register
+                    TodoPlaceHolder.Visible = false;
+                    PublicPlaceHolder.Visible = true;
+                    
+                }
+                SetActivePage();
+            }
         }
 
         /**
@@ -37,6 +57,15 @@ namespace COMP2007_S2016_MidTerm_200304260
                     break;
                 case "Todo List":
                     todo.Attributes.Add("class", "active");
+                    break;
+                case "Login":
+                    login.Attributes.Add("class", "active");
+                    break;
+                case "Register":
+                    register.Attributes.Add("class", "active");
+                    break;
+                case "Logout":
+                    logout.Attributes.Add("class", "active");
                     break;
             }
         }
