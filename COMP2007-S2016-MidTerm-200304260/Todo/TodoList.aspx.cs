@@ -39,11 +39,11 @@ namespace COMP2007_S2016_MidTerm_200304260
             using (TodoConnection db = new TodoConnection())
             {
                 //query the Games table using EF and LINQ
-                var Todos = (from allTodos in db.Todos
-                             select allTodos);
+                var Todo = (from allTodo in db.Todos
+                             select allTodo);
 
                 //bind results to gridview
-                TodoGridView.DataSource = Todos.AsQueryable().ToList();
+                TodoGridView.DataSource = Todo.AsQueryable().ToList();
                 TodoGridView.DataBind();
             }
         }
@@ -88,7 +88,26 @@ namespace COMP2007_S2016_MidTerm_200304260
 
         /*
         * <summary>
-        * Allows multiple pages to be viewed at once
+        * Allows the user to change the page
+        * </summary>
+        * @method TodosGridView_PageIndexChanging
+        * @param {object} sender
+        * @param {GridViewPageEventArgs} e
+        * @returns {void}
+        */
+
+        protected void TodoGridView_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            //Set the new page number
+            TodoGridView.PageIndex = e.NewPageIndex;
+
+            //refresh the grid
+            this.GetTodo();
+        }
+
+        /*
+        * <summary>
+        * Allows the user to change the amount of different items displayed at once
         * </summary>
         * @method PageSizeDropDownList_SelectedIndexChanged
         * @param {object} sender

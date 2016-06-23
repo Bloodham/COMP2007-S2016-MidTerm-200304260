@@ -21,14 +21,17 @@
                 </asp:GridView>
             </div>
         </div>
+         <
          <div>
-            <label for="PageSizeDropDownList"></label>
-            <asp:DropDownList runat="server" ID="PageSizeDropDownList" AutoPostBack="true"
-                CssClass="btn btn-default bt-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
-                <asp:ListItem Text="1" Value="1" />
-                <asp:ListItem Text="2" Value="2" />
-                <asp:ListItem Text="3" Value="3" />
-            </asp:DropDownList>
-        </div>
-    </div>
+             <label for="PageSizeDropDownList">Records per Page: </label>
+             <asp:DropDownList ID="PageSizeDropDownList" runat="server"
+                 AutoPostBack="true" CssClass="btn btn-default bt-sm dropdown-toggle"
+                 OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
+                 <asp:ListItem Text="3" Value="3" />
+                 <asp:ListItem Text="5" Value="5" />
+                 <asp:ListItem Text="10" Value="10" />
+                 <asp:ListItem Text="All" Value="10000" />
+             </asp:DropDownList>
+         </div>
+     </div>
 </asp:Content>

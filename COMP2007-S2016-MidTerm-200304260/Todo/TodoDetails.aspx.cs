@@ -38,7 +38,7 @@ namespace COMP2007_S2016_MidTerm_200304260
             // connect to the EF DB
             using (TodoConnection db = new TodoConnection())
             {
-                // populate a todo object instance with the TodoID from the URL Parameter
+                // populate a object with the todo ID
                 Todo UpdatedTodo = (from todo in db.Todos
                                     where todo.TodoID == TodoID
                                     select todo).FirstOrDefault();
@@ -92,7 +92,7 @@ namespace COMP2007_S2016_MidTerm_200304260
                                select todo).FirstOrDefault();
                 }
 
-                // add form data to the new todo record
+                // add new form data to the record
                 newTodo.TodoName = TodoNameTextBox.Text;
                 newTodo.TodoNotes = TodoNotesTextBox.Text;
                 if (CompletedCheckBox.Checked == true)
@@ -104,7 +104,7 @@ namespace COMP2007_S2016_MidTerm_200304260
                     newTodo.Completed = false;
                 }
 
-                // use LINQ to ADO.NET to add / insert new todo into the database
+                // use LINQ to ADO.NET to add 
                 if (TodoID == 0)
                 {
                     db.Todos.Add(newTodo);
