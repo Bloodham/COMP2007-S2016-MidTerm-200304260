@@ -9,6 +9,12 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 
+/**
+ * @author:  Ryan Jameson
+ * @date: June 23th, 2016
+ * @version: 0.0.1 - Allows the user to be able to login
+ */
+
 namespace COMP2007_S2016_MidTerm_200304260
 {
     public partial class Login : System.Web.UI.Page

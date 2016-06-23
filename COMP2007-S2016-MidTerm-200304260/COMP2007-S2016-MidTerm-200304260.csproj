@@ -178,7 +178,7 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="TodoDetails.aspx" />
+    <Content Include="Todo\TodoDetails.aspx" />
     <Content Include="Todo\TodoList.aspx" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
@@ -238,11 +238,11 @@
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="TodoDetails.aspx.cs">
+    <Compile Include="Todo\TodoDetails.aspx.cs">
       <DependentUpon>TodoDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="TodoDetails.aspx.designer.cs">
+    <Compile Include="Todo\TodoDetails.aspx.designer.cs">
       <DependentUpon>TodoDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Todo\TodoList.aspx.cs">
