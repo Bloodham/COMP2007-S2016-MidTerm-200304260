@@ -18,8 +18,8 @@
                     <asp:CheckBox ID="CompletedCheckBox" Text="" runat="server" />
                 </div>
                 <div class="text-right">
-                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="tbn btn-warning btn-lg" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton_Click"/>
-                    <asp:Button Text="Save" ID="SaveButton" CssClass="tbn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
+                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="tbn btn-warning btn-sm" runat="server" UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton_Click"/>
+                    <asp:Button Text="Save" ID="SaveButton" CssClass="tbn btn-primary btn-sm" runat="server" OnClick="SaveButton_Click"/>
                 </div>
             </div>
         </div>

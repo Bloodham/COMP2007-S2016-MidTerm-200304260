@@ -12,13 +12,11 @@
                         <asp:BoundField DataField="TodoName" HeaderText="Name" Visible="true" />
                         <asp:BoundField DataField="TodoNotes" HeaderText="Notes" Visible="true" />
                         <asp:CheckBoxField DataField="Completed" HeaderText="Completed" Visible="true" />
-
                             <asp:HyperLinkField HeaderText="Edit" Text="<i calss='fa fa-encil-square-o fa-lg'></i> Edit"
                             NavigateUrl="TodoDetails.aspx"  ControlStyle-CssClass="btn btn-primary btn-sm" DataNavigateUrlFields="TodoID"
                             runat="server" DataNavigateUrlFormatString="TodoDetails.aspx?TodoID={0}" />
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete" ShowDeleteButton="true" ButtonType="Link"
-                            ControlStyle-CssClass="btn btn-danger btn-sm" />
-                            
+                            ControlStyle-CssClass="btn btn-danger btn-sm" />  
                     </Columns>
                 </asp:GridView>
             </div>
@@ -28,9 +26,8 @@
             <asp:DropDownList runat="server" ID="PageSizeDropDownList" AutoPostBack="true"
                 CssClass="btn btn-default bt-sm dropdown-toggle" OnSelectedIndexChanged="PageSizeDropDownList_SelectedIndexChanged">
                 <asp:ListItem Text="1" Value="1" />
+                <asp:ListItem Text="2" Value="2" />
                 <asp:ListItem Text="3" Value="3" />
-                <asp:ListItem Text="5" Value="5" />
-                <asp:ListItem Text="All" Value="10000" />
             </asp:DropDownList>
         </div>
     </div>

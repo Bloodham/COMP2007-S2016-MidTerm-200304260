@@ -24,6 +24,14 @@ namespace COMP2007_S2016_MidTerm_200304260
 
         }
 
+        /*
+       * <summary>
+       * Registers a user and stores it into the DB
+       * </summary>
+       * @method RegisterButton_Click
+       * @return {void}
+       */
+
         protected void RegisterButton_Click(object sender, EventArgs e)
         {
             // create new userStore and userManager objects

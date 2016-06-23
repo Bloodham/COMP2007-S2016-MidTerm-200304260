@@ -17,6 +17,14 @@ using Microsoft.Owin.Security;
 
 namespace COMP2007_S2016_MidTerm_200304260
 {
+
+    /*
+        * <summary>
+        * Doesn't show page/ logs the user out
+        * </summary>
+        * @method Page_Load
+        * @return {void}
+        */
     public partial class Logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

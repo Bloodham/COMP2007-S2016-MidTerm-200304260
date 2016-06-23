@@ -24,6 +24,14 @@ namespace COMP2007_S2016_MidTerm_200304260
 
         }
 
+        /*
+         * <summary>
+         * Logs in a user and shows them different navbar
+         * </summary>
+         * @method LoginButton_Click
+         * @return {void}
+         */
+
         protected void LoginButton_Click(object sender, EventArgs e)
         {
             // create new userStore and userManager objects
